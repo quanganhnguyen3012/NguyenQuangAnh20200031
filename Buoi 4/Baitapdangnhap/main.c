@@ -15,7 +15,7 @@ void Tinhsofibo(int a1, int b1){
 	for(i=0; i<30; i++){
 	    if(a1<=danhsachFibo[i]){
 		    a2=i;
-	            break;
+	        break;
 	    }
 	}
 	//tim so Fibonacci dau tien trong khoang 2 so nguyen nhap vao
@@ -40,13 +40,20 @@ void Dangnhap(char tendn[], char mk[]){
 	scanf("%d", &m);
 	switch(m) {
 		case 1: {
-			int a,b;
+			int a,b,g;
 			Tinhsofibo(a,b);
-			Dangnhap(tendn,mk);
-			break;
+			printf("\nChon [1] de quay ve menu, [2] de dang xuat :");
+			fflush(stdin);
+			scanf("%d", &g);
+			if(g==1) {
+			    Dangnhap(tendn,mk);
+			}
+			if(g==2) {
+			    break;
+			}
 		}
 		case 2: {
-			int cauhoi;
+			int cauhoi,g;
 			char Hint[6][100], Word[5][100], cautraloi[20];
 			strcpy(Hint[1],"A large CPU maker in the US");
 			strcpy(Hint[2],"The best university about science and technology in VN");
@@ -67,8 +74,15 @@ void Dangnhap(char tendn[], char mk[]){
 			gets(cautraloi);
 			if(strcmp(cautraloi,Word[cauhoi])==0){
 				printf("Dap an chinh xac!");
-				Dangnhap(tendn,mk);
-			    break;
+				printf("\nChon [1] de quay ve menu, [2] de dang xuat :");
+				fflush(stdin);
+			    scanf("%d", &g);
+			    if(g==1) {
+			        Dangnhap(tendn,mk);
+			    }
+			    if(g==2) {
+			        break;
+			    }
 			}
 			else{
 				printf("Cau tra loi sai!\n");
@@ -76,7 +90,7 @@ void Dangnhap(char tendn[], char mk[]){
 			}
 		}
 		case 3: {
-			int so1,so2,i,dem=0,mang1[25],mang2[25];
+			int so1,so2,i,g,dem=0,mang1[25],mang2[25];
 			printf("Moi ban nhap vao 2 so de bai toan lay so ngau nhien trong ");
 			printf("\nkhoang do de thuc hien chuong trinh.\n");
 			printf("Min-max:");
@@ -94,55 +108,70 @@ void Dangnhap(char tendn[], char mk[]){
 				//chon random phep tinh
 				if(check==0){
 					int ketqua;
-					printf("%d+%d=",mang1[i],mang2[i]);
+					printf("Cau %d:%d+%d=",i+1,mang1[i],mang2[i]);
 					scanf("%d", &ketqua);
 					if(ketqua==mang1[i]+mang2[i]){
-						printf("Dung\n");
+						printf("Ket qua: Dung\n");
 						dem++;
 					}
 					else{
-					    printf("Sai\n");
+					    printf("Ket qua: Sai\n");
 					}
 				}
 				//thuc hien phep tinh cong giua 2 phan tu cua 2 mang da tao ben tren
 				if(check==1){
 					int ketqua;
-					printf("%d-%d=",mang1[i],mang2[i]);
+					printf("Cau %d:%d-%d=",i+1,mang1[i],mang2[i]);
 					scanf("%d", &ketqua);
 					if(ketqua==mang1[i]-mang2[i]){
-						printf("Dung\n");
+						printf("Ket qua: Dung\n");
 						dem++;
 					}
 					else{
-					    printf("Sai\n");
+					    printf("Ket qua: Sai\n");
 					}
 				}
 				//thuc hien phep tinh tru giua 2 phan tu cua 2 mang da tao ben tren
 				if(check==2){
 					int ketqua;
-					printf("%d*%d=",mang1[i],mang2[i]);
+					printf("Cau %d:%d*%d=",i+1,mang1[i],mang2[i]);
 					scanf("%d", &ketqua);
 					if(ketqua==mang1[i]*mang2[i]){
-						printf("Dung\n");
+						printf("Ket qua: Dung\n");
 						dem++;
 					}
 					else{
-					    printf("Sai\n");
+					    printf("Ket qua: Sai\n");
 					}
 				}
 				//thuc hien phep tinh nhan giua 2 phan tu cua 2 mang da tao ben tren
 			}
-			printf("So dap an dung la: %d/25", dem);
-			Dangnhap(tendn,mk);
-			break;
+			printf("So cau tra loi dung cua ban la: %d/25", dem);
+			printf("\nChon [1] de quay ve menu, [2] de dang xuat :");
+			fflush(stdin);
+			scanf("%d", &g);
+			if(g==1) {
+			    Dangnhap(tendn,mk);
+			}
+			if(g==2) {
+			    break;
+			}
 		}
 		case 4: {
+			int g;
 			printf("Chuong trinh 1: Nhap vao 2 so nguyen va dua ra cac so Fibonacci trong khoang do.");
 			printf("\nChuong trinh 2: Dua ra goi y va nguoi dung nhap den khi dung tu ngu.\n");
 			printf("Chuong trinh 3: Dua ra phep tinh ngau nhien giua 2 so va yeu cau nguoi dung ");
 			printf("\nnhap gia tri phep tinh, sau do thong bao ket qua cho nguoi dung.\n");
-			Dangnhap(tendn,mk);
-			break;
+			printf("\nChon [1] de quay ve menu, [2] de dang xuat :");
+			fflush(stdin);
+			scanf("%d", &g);
+			if(g==1) {
+			    Dangnhap(tendn,mk);
+			}
+			if(g==2) {
+			    break;
+			}
 		}
 		case 5: {
 			break;
@@ -220,8 +249,8 @@ int main(int argc, char *argv[]) {
 			break;
 	        }
 	        case 3:{
-	    	       printf("Hen gap lai ^^");
-		       break;
+	    	    printf("Hen gap lai ^^");
+		        break;
 		}
 	}					
 }
