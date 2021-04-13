@@ -14,15 +14,15 @@ void Tinhsofibo(int a1, int b1){
 	//tao mang gom cac phan tu la cac so Fibonacci 
 	for(i=0; i<30; i++){
 	    if(a1<=danhsachFibo[i]){
-		    a2=i;
+		a2=i;
 	        break;
 	    }
 	}
 	//tim so Fibonacci dau tien trong khoang 2 so nguyen nhap vao
 	for(i=0; i<30; i++){
 	    if(b1<=danhsachFibo[i]){
-		    b2=i-1;
-		    break;
+		 b2=i-1;
+		 break;
 	    }
 	}
 	//tim so Fibonacci cuoi cung trong khoang 2 so nguyen nhap vao
@@ -73,9 +73,9 @@ void Dangnhap(char tendn[], char mk[]){
 			fflush(stdin);
 			gets(cautraloi);
 			if(strcmp(cautraloi,Word[cauhoi])==0){
-				printf("Dap an chinh xac!");
-				printf("\nChon [1] de quay ve menu, [2] de dang xuat :");
-				fflush(stdin);
+		            printf("Dap an chinh xac!");
+			    printf("\nChon [1] de quay ve menu, [2] de dang xuat :");
+			    fflush(stdin);
 			    scanf("%d", &g);
 			    if(g==1) {
 			        Dangnhap(tendn,mk);
@@ -111,8 +111,8 @@ void Dangnhap(char tendn[], char mk[]){
 					printf("Cau %d:%d+%d=",i+1,mang1[i],mang2[i]);
 					scanf("%d", &ketqua);
 					if(ketqua==mang1[i]+mang2[i]){
-						printf("Ket qua: Dung\n");
-						dem++;
+					    printf("Ket qua: Dung\n");
+					    dem++;
 					}
 					else{
 					    printf("Ket qua: Sai\n");
@@ -124,8 +124,8 @@ void Dangnhap(char tendn[], char mk[]){
 					printf("Cau %d:%d-%d=",i+1,mang1[i],mang2[i]);
 					scanf("%d", &ketqua);
 					if(ketqua==mang1[i]-mang2[i]){
-						printf("Ket qua: Dung\n");
-						dem++;
+					    printf("Ket qua: Dung\n");
+					    dem++;
 					}
 					else{
 					    printf("Ket qua: Sai\n");
@@ -250,7 +250,7 @@ int main(int argc, char *argv[]) {
 	        }
 	        case 3:{
 	    	    printf("Hen gap lai ^^");
-		        break;
+		    break;
 		}
 	}					
 }
