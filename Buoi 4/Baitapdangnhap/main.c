@@ -13,17 +13,17 @@ void Tinhsofibo(int a1, int b1){
 	}
 	//tao mang gom cac phan tu la cac so Fibonacci 
 	for(i=0; i<30; i++){
-		if(a1<=danhsachFibo[i]){
+	    if(a1<=danhsachFibo[i]){
 		    a2=i;
-			break;
-		}
+	            break;
+	    }
 	}
 	//tim so Fibonacci dau tien trong khoang 2 so nguyen nhap vao
 	for(i=0; i<30; i++){
 	    if(b1<=danhsachFibo[i]){
 		    b2=i-1;
-			break;
-		}
+		    break;
+	    }
 	}
 	//tim so Fibonacci cuoi cung trong khoang 2 so nguyen nhap vao
 	printf("Cac so fibonacci trong khoang la:");
@@ -216,10 +216,10 @@ int main(int argc, char *argv[]) {
 			k++;
 			goto Start;
 			break;
-	    }
-	    case 3:{
-	    	printf("Hen gap lai ^^");
-			break;
+	        }
+	        case 3:{
+	    	       printf("Hen gap lai ^^");
+		       break;
 		}
 	}					
 }
