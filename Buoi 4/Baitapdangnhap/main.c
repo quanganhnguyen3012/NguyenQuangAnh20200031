@@ -5,10 +5,9 @@
 void Tinhsofibo(int a1, int b1){
 	printf("Nhap vao 2 so nguyen can kiem tra:");
 	scanf("%d %d", &a1,&b1);
-	int danhsachFibo[30], a2, b2;
+	int danhsachFibo[30], a2, b2, i;
 	danhsachFibo[0]=1;
 	danhsachFibo[1]=1;
-	int i;
 	for(i=2; i<30; i++){
 		danhsachFibo[i]=danhsachFibo[i-1]+danhsachFibo[i-2];
 	}
@@ -101,7 +100,9 @@ void Dangnhap(char tendn[], char mk[]){
 						printf("Dung\n");
 						dem++;
 					}
-					else printf("Sai\n");
+					else{
+					    printf("Sai\n");
+					}
 				}
 				//thuc hien phep tinh cong giua 2 phan tu cua 2 mang da tao ben tren
 				if(check==1){
@@ -112,7 +113,9 @@ void Dangnhap(char tendn[], char mk[]){
 						printf("Dung\n");
 						dem++;
 					}
-					else printf("Sai\n");
+					else{
+					    printf("Sai\n");
+					}
 				}
 				//thuc hien phep tinh tru giua 2 phan tu cua 2 mang da tao ben tren
 				if(check==2){
@@ -123,7 +126,9 @@ void Dangnhap(char tendn[], char mk[]){
 						printf("Dung\n");
 						dem++;
 					}
-					else printf("Sai\n");
+					else{
+					    printf("Sai\n");
+					}
 				}
 				//thuc hien phep tinh nhan giua 2 phan tu cua 2 mang da tao ben tren
 			}
@@ -156,10 +161,9 @@ int main(int argc, char *argv[]) {
 	switch(n) {
 		case 1:{
 			char tendn[20], mk[20];
-			int check1=0, stt;
+			int check1=0, stt, i;
 			printf("Moi ban nhap ten dang nhap:");
 			scanf("%s", &tendn);
-			int i;
 			for(i=0; i<20; i++) {		
 				if(strcmp(tendn, name[i])==0) {
 					stt=i;
@@ -172,28 +176,27 @@ int main(int argc, char *argv[]) {
 				printf("Ten dang nhap khong ton tai!");
 			}
 			if(check1==1) {
-			A: printf("Nhap mat khau:");
-			scanf("%s", &mk);
-			if(strcmp(mk, matkhau[stt])==0) {
-				printf("Xin chao %s", tendn);
-				Dangnhap(tendn,mk);
-			}
-			//kiem tra xem mat khau co dung khong va chuyen vao man hinh dang nhap
-			else {	
-			    printf("Sai mat khau, vui long nhap lai.\n");
-				goto A;
-			}
+			    A: printf("Nhap mat khau:");
+			    scanf("%s", &mk);
+			    if(strcmp(mk, matkhau[stt])==0) {
+				    printf("Xin chao %s", tendn);
+				    Dangnhap(tendn,mk);
+			    }
+			    //kiem tra xem mat khau co dung khong va chuyen vao man hinh dang nhap
+			    else {	
+			        printf("Sai mat khau, vui long nhap lai.\n");
+				    goto A;
+			    }
 			}
 			goto Start;
 			break;
 		}
 		case 2:{
 			char taotendn[20], taomk[20];
-			int check2=0;
+			int check2=0,j;
 			printf("Moi ban tao ten dang nhap(Luu y ten dang nhap khong chua khoang trang)\n");
 			B: printf("Ten dang nhap:");
 			scanf("%s", &taotendn);
-			int j;
 			for(j=0; j<=20; j++){
 				if(strcmp(taotendn, name[j])==0){
 					check2=0;
