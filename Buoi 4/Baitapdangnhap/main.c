@@ -34,7 +34,7 @@ void Tinhsofibo(int a1, int b1){
 	//in ra cac so Fibonacci trong khoang nhap vao 			
 }
 void Dangnhap(char tendn[], char mk[]){
-	printf("Menu:");
+	printf("\nMenu:");
 	printf("\n1. Tinh so fibonacci giua 2 khoang\n2. Game doan chu\n3. Game giai do");
 	printf("\n4. Tro giup\n5. Dang xuat\nChon mot chuong trinh de tiep tuc:");
 	int m;
@@ -142,7 +142,7 @@ void Dangnhap(char tendn[], char mk[]){
 }	
 int main(int argc, char *argv[]) {
 	char name[20][20]={{"quanganh"},{"codientu"},{"khoahocC"}};
-	char matkhau[20][20]={{"30122002"},{"122399990"},{"clbsrc"}};
+	char matkhau[20][20]={{"30122002"},{"20200031"},{"clbsrc"}};
 	//khoi tao du lieu goc
 	int n,k=3;
 	Start: printf("Chao mung den voi chuong trinh cua toi:\n1.Dang nhap\n2.Dang ky\n3.Thoat");
@@ -171,7 +171,7 @@ int main(int argc, char *argv[]) {
 			A: printf("Nhap mat khau:");
 			scanf("%s", &mk);
 			if(strcmp(mk, matkhau[stt])==0) {
-				printf("Xin chao %s\n", tendn);
+				printf("Xin chao %s", tendn);
 				Dangnhap(tendn,mk);
 			}
 			//kiem tra xem mat khau co dung khong va chuyen vao man hinh dang nhap
