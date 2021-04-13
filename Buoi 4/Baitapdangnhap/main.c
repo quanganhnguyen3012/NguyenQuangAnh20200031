@@ -28,7 +28,7 @@ void Tinhsofibo(int a1, int b1){
 	//tim so Fibonacci cuoi cung trong khoang 2 so nguyen nhap vao
 	printf("Cac so fibonacci trong khoang la:");
 	for(i=a2; i<=b2; i++){
-	    printf("\t%d", danhsachFibo[i]);
+	    printf("  %d", danhsachFibo[i]);
 	}
 	//in ra cac so Fibonacci trong khoang nhap vao 			
 }
@@ -189,6 +189,7 @@ int main(int argc, char *argv[]) {
 			    }
 			}
 			goto Start;
+			//quay lai man hinh dang nhap sau khi chon Dang xuat trong Menu
 			break;
 		}
 		case 2:{
@@ -215,6 +216,7 @@ int main(int argc, char *argv[]) {
 			strcpy(matkhau[k],taomk);
 			k++;
 			goto Start;
+			//quay tro lai man hinh dang nhap sau khi dang ky
 			break;
 	    }
 	    case 3:{
