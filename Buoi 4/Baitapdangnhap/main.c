@@ -77,12 +77,16 @@ void Dangnhap(char tendn[], char mk[]){
 			}
 		}
 		case 3: {
-			int i,dem=0,mang1[25],mang2[25];
+			int so1,so2,i,dem=0,mang1[25],mang2[25];
+			printf("Moi ban nhap vao 2 so de bai toan lay so ngau nhien trong ");
+			printf("\nkhoang do de thuc hien chuong trinh.\n");
+			printf("Min-max:");
+			scanf("%d %d", &so1, &so2);
 			for(i=0; i<25; i++){
 				fflush(stdin);
-				mang1[i]=rand()%50;
+				mang1[i]=so1+rand()%(so2+1-so1);
 				fflush(stdin);
-				mang2[i]=rand()%100;
+				mang2[i]=so1+rand()%(so2+1-so1);
 			}
 			//tao 2 mang co cac phan tu ngau nhien de tinh toan
 			for(i=0; i<25; i++){
@@ -131,7 +135,7 @@ void Dangnhap(char tendn[], char mk[]){
 			printf("Chuong trinh 1: Nhap vao 2 so nguyen va dua ra cac so Fibonacci trong khoang do.");
 			printf("\nChuong trinh 2: Dua ra goi y va nguoi dung nhap den khi dung tu ngu.\n");
 			printf("Chuong trinh 3: Dua ra phep tinh ngau nhien giua 2 so va yeu cau nguoi dung ");
-			printf("nhap gia tri phep tinh, sau do thong bao ket qua cho nguoi dung.\n");
+			printf("\nnhap gia tri phep tinh, sau do thong bao ket qua cho nguoi dung.\n");
 			Dangnhap(tendn,mk);
 			break;
 		}
@@ -165,7 +169,7 @@ int main(int argc, char *argv[]) {
 			}
 			//kiem tra xem ten dang nhap co ton tai khong
 			if(check1==0) {
-				printf("Ten dang nhap khong hop le!");
+				printf("Ten dang nhap khong ton tai!");
 			}
 			if(check1==1) {
 			A: printf("Nhap mat khau:");
@@ -186,7 +190,8 @@ int main(int argc, char *argv[]) {
 		case 2:{
 			char taotendn[20], taomk[20];
 			int check2=0;
-			B: printf("Moi ban tao ten dang nhap: ");
+			printf("Moi ban tao ten dang nhap(Luu y ten dang nhap khong chua khoang trang)\n");
+			B: printf("Ten dang nhap:");
 			scanf("%s", &taotendn);
 			int j;
 			for(j=0; j<=20; j++){
@@ -202,7 +207,7 @@ int main(int argc, char *argv[]) {
 				goto B;
 			}
 			strcpy(name[k], taotendn);
-			printf("Moi ban tao mat khau:");
+			printf("Mat khau:");
 			scanf("%s", &taomk);
 			strcpy(matkhau[k],taomk);
 			k++;
